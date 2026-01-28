@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: infra/docker/Dockerfile.dbt
     working_dir: /app
+    environment:
+      DBT_PROFILES_DIR: /app/dbt/.dbt
     volumes:
       - ./dbt:/app/dbt
       - ./data:/app/data
