@@ -1,0 +1,10 @@
+services:
+  dbt:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.dbt
+    working_dir: /app
+    volumes:
+      - ./dbt:/app/dbt
+      - ./data:/app/data
+    command: ["bash","-lc","dbt --version"]
