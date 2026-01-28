@@ -1,0 +1,7 @@
+f1_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /app/data/f1.duckdb
+      threads: 4
